@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <input type='file' accept='text/plain' onchange='openFile(event)'>
-    <script src="script.js"></script>
-</body>
-
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="title">Jimmy's Diner</h1>
+        <p class="subtitile">The best burgers and pizzas in town.</p>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="menu">
+          <div class="item" id="1">
+            <div class="item--emoji"></div>
+            <div class="item--info">
+              <h3 class="name">Pizza</h3>
+              <p class="ingredients">pepperoni,mushrom,mozarella</p>
+              <p class="price">$14</p>
+            </div>
+            <!-- add id from data.js -->
+            <button class="btn btn-add" data-add="1">+</button>
+          </div>
+          <!-- Order info-->
+          <div class="order">
+            <h3>Your order</h3>
+            <ul class="order--list">
+              <li class="order--item">Pizza</li>
+              <button class="btn remove">remove</button>
+              <p class="price">$14</p>
+            </ul>
+            <hr />
+            <div class="total-price">
+              <h3>Total Price:</h3>
+              <p class="price">$23</p>
+            </div>
+            <button class="btn btn-green">Complete order</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="module">
+      <div class="card">
+        <h3 class="form-title">Enter card details</h3>
+        <form>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder="Enter card number"
+            required
+          />
+          <input
+            type="number"
+            name="cvv"
+            id="cvv"
+            placeholder="Enter CVV"
+            minlength="3"
+            maxlength="3"
+            required
+          />
+          <button type="submit" class="btn btn-green">Pay</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
