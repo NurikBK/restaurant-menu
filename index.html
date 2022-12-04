@@ -8,48 +8,49 @@
     <title>Document</title>
   </head>
 
-  <body>
+  <body class="flex">
     <header>
-      <div class="container">
+      <div class="container flex">
         <h1 class="title">Jimmy's Diner</h1>
-        <p class="subtitile">The best burgers and pizzas in town.</p>
+        <p class="subtitle">The best burgers and pizzas in town.</p>
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="menu">
-          <div class="item" id="1">
-            <div class="item--emoji"></div>
+      <div class="container flex">
+        <div class="menu" id="menu">
+          <div class="menu--item" id="1">
+            <div class="item--emoji">🍕</div>
             <div class="item--info">
               <h3 class="name">Pizza</h3>
               <p class="ingredients">pepperoni,mushrom,mozarella</p>
               <p class="price">$14</p>
             </div>
             <!-- add id from data.js -->
-            <button class="btn btn-add" data-add="1">+</button>
-          </div>
-          <!-- Order info-->
-          <div class="order">
-            <h3>Your order</h3>
-            <ul class="order--list">
-              <li class="order--item">Pizza</li>
-              <button class="btn remove">remove</button>
-              <p class="price">$14</p>
-            </ul>
-            <hr />
-            <div class="total-price">
-              <h3>Total Price:</h3>
-              <p class="price">$23</p>
-            </div>
-            <button class="btn btn-green">Complete order</button>
+            <button class="btn btn-add align-left" data-add="id">+</button>
           </div>
         </div>
+        <hr />
+        <!-- Order info-->
+        <div class="order">
+          <h3>Your order</h3>
+          <ul class="order--list" id="order-list">
+            <li class="order--item"><h3>Pizza</h3></li>
+            <button class="btn btn-remove">remove</button>
+            <p class="price align-left">$14</p>
+          </ul>
+        </div>
+        <hr />
+        <div class="total-price flex">
+          <h3>Total Price:</h3>
+          <p class="price align-left">$23</p>
+        </div>
+        <button class="btn btn-green">Complete order</button>
       </div>
     </main>
     <div class="module">
       <div class="card">
         <h3 class="form-title">Enter card details</h3>
-        <form>
+        <form class="flex">
           <input
             type="text"
             name="name"
@@ -69,7 +70,6 @@
             name="cvv"
             id="cvv"
             placeholder="Enter CVV"
-            minlength="3"
             maxlength="3"
             required
           />

@@ -1,5 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;700&family=Smythe&display=swap');
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  background-color: #f5f5f5;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Smythe', sans-serif;
+  line-height: 1.6;
+  flex-direction: column;
+}
+
+.container {
+  padding: 2.875em;
+  width: 600px;
+  color: #111;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+.flex {
+  display: flex;
+}
+
+header {
+  background-image: url(./images/main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #f5f5f5;
+}
+.subtitle {
+  font-size: 1.4rem;
+  color: #f5f5f5;
+}
+
+.menu--item {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.item--emoji {
+  font-size: 5rem;
+}
+
+.ingredients {
+  color: #8b8b8b;
+}
+
+.price {
+  font-size: 1.25rem;
+}
+
+.btn-add {
+  font-size: 2rem;
+  font-weight: 200;
+  color: #3c3c3c;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1.5px solid #dedede;
+}
+
+.order > h3 {
+  text-align: center;
+  margin: 2.8em;
+}
+
+.order--list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.btn-remove {
+  color: #bbbbbb;
+  background-color: transparent;
+  border: none;
+  font-size: 0.75rem;
+}
+
+.align-left {
+  margin-left: auto;
+}
+
+.btn-green {
+  background: #16db99;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  border: none;
+  display: block;
+  padding: 1.125em;
+  margin-top: 2.875em;
+}
+
+.module {
+  display: none;
+  position: fixed;
+  width: 424px;
+  padding: 1.5em;
+  text-align: center;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 10px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.form-title {
+  margin-bottom: 1em;
+}
+
+input {
+  font-size: 1.25rem;
+  padding: 0.9em;
+}
+
+.module form {
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.btn {
+  cursor: pointer;
+  transition: tranform 0.5 ease-in;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
