@@ -43,6 +43,7 @@ header {
 
 header > .container {
   background-color: transparent;
+  justify-content: center;
 }
 
 .title {
